@@ -21,7 +21,7 @@ mongoose
 
 // set up PORT AND HOST
 const port = process.env.PORT || 3000;
-const host = process.env.HOST || "https://nodejs-booklist-app.herokuapp.com";
+const host = process.env.HOST || "locahost";
 
 // set template engine to use
 app.set("view engine", "ejs");
