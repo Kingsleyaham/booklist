@@ -9,6 +9,8 @@ const app = express();
 const dURI =
   "mongodb+srv://kingsley:08133456114fb@cluster0.kwd9e.mongodb.net/booklist?retryWrites=true&w=majority";
 
+const port = process.env.PORT || 3000;
+
 mongoose
   .connect(dURI)
   .then((result) =>
