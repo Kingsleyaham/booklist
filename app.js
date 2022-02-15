@@ -6,7 +6,10 @@ const bookRoute = require("./routes/bookRoute");
 // express app
 const app = express();
 
-const dURI = "mongodb://localhost:27017/booklist";
+// const dURI = "mongodb://localhost:27017/booklist";
+const dURI =
+  "mongodb+srv://kingsley:08133456114fb@cluster0.kwd9e.mongodb.net/booklist?retryWrites=true&w=majority";
+
 mongoose
   .connect(dURI)
   .then((result) =>
