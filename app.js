@@ -9,12 +9,13 @@ const app = express();
 let dURI = process.env.MONGO_URI || "mongodb://localhost:27017/booklist";
 
 const port = process.env.PORT || 3000;
+const host = process.env.HOST || "localhost";
 
 mongoose
   .connect(dURI)
   .then((result) =>
     app.listen(port, () => {
-      console.log(`server running at http://localhost:3000`);
+      console.log(`server running at http://${host}:${port}`);
     })
   )
   .catch((err) => console.log(err));
