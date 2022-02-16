@@ -6,15 +6,7 @@ const bookRoute = require("./routes/bookRoute");
 // express app
 const app = express();
 
-if (process.env.NODE_ENV === "production") {
-  const dbUsername = process.env.DB_USERNAME;
-  const dbPwd = process.env.DB_PASSWORD;
-
-  const dURI = `mongodb+srv://kingsley:08133456114fb@cluster0.kwd9e.mongodb.net/booklist?retryWrites=true&w=majority`;
-}
-if (process.env.NODE_ENV == "development") {
-  const dURI = "mongodb://localhost:27017/booklist";
-}
+let dURI = process.env.MONGO_URI || "mongodb://localhost:27017/booklist";
 
 const port = process.env.PORT || 3000;
 
