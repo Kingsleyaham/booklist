@@ -1,13 +1,20 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const dotenv = require("dotenv").config();
 const bookRoute = require("./routes/bookRoute");
 // express app
 const app = express();
 
-// const dURI = "mongodb://localhost:27017/booklist";
-const dURI =
-  "mongodb+srv://kingsley:08133456114fb@cluster0.kwd9e.mongodb.net/booklist?retryWrites=true&w=majority";
+if (process.env.NODE_ENV === "production") {
+  const dbUsername = process.env.DB_USERNAME;
+  const dbPwd = process.env.DB_PASSWORD;
+
+  const dURI = `mongodb+srv://kingsley:08133456114fb@cluster0.kwd9e.mongodb.net/booklist?retryWrites=true&w=majority`;
+}
+if (process.env.NODE_ENV == "development") {
+  const dURI = "mongodb://localhost:27017/booklist";
+}
 
 const port = process.env.PORT || 3000;
 
