@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL:[booklist](https://nodejs-booklist-app.herokuapp.com/)
+- Live Site URL:(https://nodejs-booklist-app.herokuapp.com/)
 
 ## My process
 
