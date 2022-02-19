@@ -194,6 +194,11 @@
             let author = document.getElementById("edit_author");
             let isbn = document.getElementById("edit_isbn");
 
+            // set the value to empty
+            title.value = '';
+            author.value = '';
+            isbn.value = '';
+
             // remove all errors once clicked
             document.getElementById("edit_title_error").textContent = '';
             document.getElementById("edit_author_error").textContent = '';
